@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/register/step1', [RegisterController::class, 'user']);
+Route::post('/register/step1', [RegisterController::class, 'userRegister']);
+
+Route::get('/register/step2', [RegisterController::class, 'weight']);
+Route::post('/register/step2', [RegisterController::class, 'weightRegister']);
+
+Route::get('/weight_logs', [AdminController::class, 'index'])->middleware('auth');
+
+Route::get('/weight_logs/goal_setting', [AdminController::class, 'setting']);

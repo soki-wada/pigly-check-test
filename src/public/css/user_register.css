@@ -1,4 +1,4 @@
-.content-title {
+.content-title{
     margin-top: 5px;
     font-size: 30px;
     font-weight: 300;
@@ -6,29 +6,29 @@
     text-align: center;
 }
 
-.content-flow {
+.content-flow{
     font-size: 16px;
     font-weight: 300;
     color: #333333;
     text-align: center;
 }
 
-.login-form-wrapper {
+.user-register-form-wrapper{
     width: 100%;
 
 }
 
-.login-form {
+.user-register-form{
     width: 100%;
 }
 
-.login-form-section-title {
+.user-register-form-section-title{
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.login-form-input {
+.user-register-form-input{
     width: 100%;
     padding: 10px;
     border: 1px solid #e0dfde;
@@ -36,13 +36,13 @@
     margin-bottom: 15px;
 }
 
-.login-form-button-wrapper {
+.user-register-form-button-wrapper{
     margin: 0 auto;
     width: 50%;
     height: 50px;
 }
 
-.login-form-button {
+.user-register-form-button{
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #a3a6e1, #ffabd9);
@@ -52,7 +52,7 @@
     color: #ffffff;
 }
 
-.content-register {
+.content-login{
     display: block;
     text-align: center;
     margin-top: 15px;
