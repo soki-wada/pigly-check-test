@@ -17,6 +17,7 @@
 </p>
 <div class="weight-register-form-wrapper">
     <form action="/register/step2" class="weight-register-form" method="post">
+        @csrf
         <p class="weight-register-form-section-title">現在の体重</p>
         <div class="weight-register-form-input-wrapper">
             <input type="text" class="weight-register-form-input" placeholder="現在の体重を入力" name="weight" value="{{old('weight')}}"><span>kg</span>

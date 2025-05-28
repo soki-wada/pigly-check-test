@@ -17,4 +17,14 @@ class WeightLog extends Model
         'exercise_time',
         'exercise_content'
     ];
+
+    public function scopeDateSearch($query, $olderDate, $newerDate){
+        if(!empty($olderDate)){
+            $query->where('date', '>=', $olderDate);
+        }
+
+        if(!empty($newerDate)){
+            $query->where('date', '<=', $newerDate);
+        }
+    }
 }

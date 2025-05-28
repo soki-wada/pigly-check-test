@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\WeightRequest;
-
+use App\Models\WeightLog;
+use App\Models\WeightTarget;
 
 class RegisterController extends Controller
 {
@@ -43,10 +44,20 @@ class RegisterController extends Controller
             [
                 'name' => session('register.name'),
                 'email' => session('register.email'),
-                'password' => session('register.password'),
-
+                'password' => Hash::make(session('register.password')),
             ]
         );
+
+        WeightTarget::create([
+            'user_id' => $user->id,
+            'target_weight' => $request->target_weight,
+        ]);
+
+        WeightLog::create([
+            'user_id' => $user->id,
+            'weight' => $request->weight,
+            'date' => now(),
+        ]);
 
         session() -> forget('register');
 

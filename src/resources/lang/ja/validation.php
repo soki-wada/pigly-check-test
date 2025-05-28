@@ -130,6 +130,13 @@ return [
     */
 
     'custom' => [
+        'email' => [
+            'required' => 'メールアドレスは必須です。',
+            'email' => '有効なメールアドレスを入力してください。',
+        ],
+        'password' => [
+            'required' => 'パスワードを入力してください。',
+        ],
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],

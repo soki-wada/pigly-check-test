@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class WeightRequest extends FormRequest
+class TargetRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,6 @@ class WeightRequest extends FormRequest
     {
         return [
             //
-            'weight' => 'required|numeric',
             'target_weight' => 'required|numeric'
         ];
     }
@@ -33,17 +32,16 @@ class WeightRequest extends FormRequest
     public function messages()
     {
         return [
-            'weight.required' => '現在の体重を入力してください',
-            'weight.numeric' => '数値で入力してください',
             'target_weight.required' => '目標の体重を入力してください',
             'target_weight.numeric' => '数字で入力してください',
         ];
     }
 
+
     public function withValidator($validator)
     {
         $validator->after(function ($validator) {
-            foreach (['weight', 'target_weight'] as $field) {
+            foreach (['target_weight'] as $field) {
                 $value = $this->input($field);
                 if (!is_numeric($value)) continue;
 

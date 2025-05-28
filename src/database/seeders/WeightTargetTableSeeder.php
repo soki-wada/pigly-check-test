@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class WeightTargetsTableSeeder extends Seeder
+class WeightTargetTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,6 +19,6 @@ class WeightTargetsTableSeeder extends Seeder
             'user_id' => '1',
             'target_weight' => '50.0'
         ];
-        DB::table('weight_targets')->insert($param);
+        DB::table('weight_target')->insert($param);
     }
 }

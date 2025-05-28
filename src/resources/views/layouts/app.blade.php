@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <div class="header-button-wrapper">
-                    <form action="{{route('logout')}}" class="header-form" method="post">
+                    <form action="/logout" class="header-form" method="post">
                         @csrf
                         <button class="header-button-item" type="submit">logout</button>
                     </form>
