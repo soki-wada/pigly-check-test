@@ -130,6 +130,10 @@ td{
     padding: 20px 40px;
 }
 
+tr:hover:nth-child(n+2){
+    background-color: #f7f7f7;
+}
+
 svg.w-5.h-5 {
     width: 30px;
     height: 30px;
